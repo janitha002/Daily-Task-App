@@ -19,8 +19,9 @@ class TaskController extends Controller
         $task->save();
 
         $data=Task::all();
-        dd($data);
-        // return redirect() ->back();
+        // dd($data);
+        
+        return view('tasks')->with('tasks', $data);
         
         // return view('/task')
         // dd($request->all());

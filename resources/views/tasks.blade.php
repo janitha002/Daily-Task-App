@@ -32,11 +32,14 @@
                         <th>ID</th>
                         <th>Task</th>
                         <th>Completed</th>
+                        
+                        @foreach($tasks as $task)
                         <tr>
-                            <td>1</td>
-                            <td>I Have to learn Laraval today</td>
-                            <td>Not Yet</td>
+                            <td>{{$task->id}}</td>
+                            <td>{{$task->task}}</td>
+                            <td>{{$task->iscompleted}}</td>
                         </tr>
+                        @endforeach
 
                     </table>
                 </div>
