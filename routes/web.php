@@ -23,3 +23,5 @@ Route::get('/tasks', function () {
 
 Route::post('/saveTask', 'TaskController@store');
 
+Route::get('/markascompleted/{id}','TaskController@UpdateTaskAsCompleted');
+
